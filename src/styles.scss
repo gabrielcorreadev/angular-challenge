@@ -1,2 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
+.bg-default{
+    background-color: #e7eef1;
+}
+
+.nav-view-full{
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+}
+
+.navview .holder:active, .navview .navview-menu li a:active, .navview .pull-button:active {
+    background-color: #07506a !important;
+}
+
+.navview .holder:hover, .navview .navview-menu li a:hover, .navview .pull-button:hover {
+    background-color: #07506a !important;
+}
