@@ -1,1 +1,73 @@
-teste admissao
+<app-nav-bar title="Nova Admissão Cooperado" [breadcrumb]="breadcrumbList"></app-nav-bar>
+<ng-stepper #cdkStepper [linear]="true" class="mt-4">
+ 
+    <cdk-step [optional]="false">
+      <ng-template cdkStepLabel>
+        <div class="step-bullet"></div>
+        <div class="step-title">Inicío</div>
+      </ng-template>
+      <app-start #stepOne></app-start>
+    </cdk-step>
+    
+    <cdk-step [optional]="true">
+      <ng-template cdkStepLabel>
+        <div class="step-bullet"></div>
+        <div class="step-title">Documentos</div>
+      </ng-template>
+      <app-documents #stepTwo></app-documents>
+    </cdk-step>
+
+    <cdk-step [optional]="true">
+        <ng-template cdkStepLabel>
+          <div class="step-bullet"></div>
+          <div class="step-title">Dados cadastrais</div>
+        </ng-template>
+        <app-registration-data #stepTwo></app-registration-data>
+      </cdk-step>
+    
+      <cdk-step [optional]="true">
+        <ng-template cdkStepLabel>
+          <div class="step-bullet"></div>
+          <div class="step-title">Admissão</div>
+        </ng-template>
+        <app-admission #stepTwo></app-admission>
+      </cdk-step>
+ </ng-stepper>
+<div class="footer bg-white p-3">
+    <button type="button" class="btn btn-primary me-3">Iniciar nova Admissão</button>
+    <button type="button" class="btn btn-outline-primary" (click)="clickSideBar()">Dicas para admissão</button>
+</div>
+
+
+<div class="sidebar-slider" [class.sidebar-slide-in]="sidebarShow">
+	  <div class="sidebar-content">
+        <div class="d-flex justify-content-center flex-column align-self-start">
+            <h4 class="fw-normal mb-3">Check-list para admissão de cooperado</h4>
+            <p class="sub-title-label">Confira algumas dicas que irão lhe ajudar neste atendimento para que a admissão aconteça da melhor forma possível.</p>
+            <div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="check1">
+                    <label class="form-check-label" for="check1">
+                      Conheça seu cooperado
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="check2">
+                    <label class="form-check-label" for="check2">
+                      Fale sobre a Cooperativa
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="check3">
+                    <label class="form-check-label" for="check3">
+                      Documentos e comprovações necessárias
+                    </label>
+                  </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="align-self-end"><button type="button" class="btn btn-outline-primary" (click)="clickSideBar()">Continuar atendimento</button></div>
+        </div>
+	  </div>
+</div>
+<div class="sidebar-backdrop" (click)="clickSideBar()" *ngIf="sidebarShow"></div>

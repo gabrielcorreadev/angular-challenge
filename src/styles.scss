@@ -1,19 +1,171 @@
+$theme-colors: (
+  "primary": #165c7d,
+  "success": #10c652,
+  "danger": #ff1010
+);
+
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import '~ngx-toastr/toastr';
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "~ngx-bootstrap/datepicker/bs-datepicker";
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Roboto:wght@700&display=swap');
+
 /* You can add global styles to this file, and also import other style files */
+
+.btn{
+    border-radius: 0px;
+    font-weight: 500;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
 
 .bg-default{
     background-color: #e7eef1;
 }
 
+.sub-title-label{
+font-size: small;
+}
+
+.breadcrumb-item > a {
+    text-decoration: none;
+}
 .nav-view-full{
     position: absolute !important;
     top: 0;
     bottom: 0;
 }
 
-.navview .holder:active, .navview .navview-menu li a:active, .navview .pull-button:active {
-    background-color: #07506a !important;
+html {
+    min-height: 100%;
 }
 
-.navview .holder:hover, .navview .navview-menu li a:hover, .navview .pull-button:hover {
-    background-color: #07506a !important;
+body {
+    min-height: 100vh;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  .b-example-divider {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+  
+  .bi {
+    vertical-align: -.125em;
+    pointer-events: none;
+    fill: currentColor;
+  }
+  
+  .dropdown-toggle { outline: 0; }
+  
+  .nav-flush .nav-link {
+    border-radius: 0;
+  }
+  
+  .btn-toggle {
+    display: inline-flex;
+    align-items: center;
+    padding: .25rem .5rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, .65);
+    background-color: transparent;
+    border: 0;
+  }
+  .btn-toggle:hover,
+  .btn-toggle:focus {
+    color: rgba(0, 0, 0, .85);
+    background-color: #d2f4ea;
+  }
+  
+  .btn-toggle::before {
+    width: 1.25em;
+    line-height: 0;
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+    transition: transform .35s ease;
+    transform-origin: .5em 50%;
+  }
+  
+  .btn-toggle[aria-expanded="true"] {
+    color: rgba(0, 0, 0, .85);
+  }
+  .btn-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+  }
+  
+  .btn-toggle-nav a {
+    display: inline-flex;
+    padding: .1875rem .5rem;
+    margin-top: .125rem;
+    margin-left: 1.25rem;
+    text-decoration: none;
+  }
+  .btn-toggle-nav a:hover,
+  .btn-toggle-nav a:focus {
+    background-color: #d2f4ea;
+  }
+  
+  .scrollarea {
+    overflow-y: auto;
+  }
+  
+  .fw-semibold { font-weight: 600; }
+  .lh-tight { line-height: 1.25; }
+
+  .navbar-user{
+      width: 100%;
+      height: 5.5rem;
+  }
+
+  .f-roboto{
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  .font-small{
+    font-size: small;
+  }
+
+  .card-title-x{
+    font-size: 1rem;
+  }
+
+  .sub-title{
+    font-weight: 400;
+    font-size: 0.9rem;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+}
+
+.photo-user{
+    border: solid 2px #165c7d;
+}
+
+.icon-card{
+    font-size: 1.6rem;
+}
+
+.btn-link {
+    text-decoration: none !important;
 }

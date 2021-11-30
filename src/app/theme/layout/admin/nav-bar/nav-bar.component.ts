@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,7 +7,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
+  @Input() title: string = '';
+  @Input() breadcrumb: Array<any> = [];
 
+  constructor(){
+
+  }
     ngOnInit() {
       }
 }

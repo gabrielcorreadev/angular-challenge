@@ -1,0 +1,30 @@
+{
+  "name": "Mariane de Souza Oliveira",
+  "situation": 1,
+  "data": [
+    {
+      "id": 1,
+      "title": "Conta Aplicação",
+      "cooperative": "Cooperativa Viacredi",
+      "account_number": "557932-4",
+      "cpf":"81675909091",
+      "balance": 1.0000
+    },
+    {
+      "id": 2,
+      "title": "Conta corrente",
+      "cooperative": "Cooperativa Viacredi",
+      "account_number": "778461-8",
+      "cpf":"81675909091",
+      "balance": 1.0000
+    },
+    {
+      "id": 3,
+      "title": "Conta Poupança",
+      "cooperative": "Cooperativa Viacredi",
+      "account_number": "258481-7",
+      "cpf":"557932-4",
+      "balance": 1.0000
+    }
+  ]
+}
