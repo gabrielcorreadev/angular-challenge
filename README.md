@@ -1,4 +1,4 @@
-# Desafio Angular Uol - Gabriel Correa
+# Desafio Angular - Gabriel Correa
 
 ![](header.png)
 
